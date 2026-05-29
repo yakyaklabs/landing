@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>We're under construction!</title>
+  <meta name="description" content="YakYak is coming soon! Sign up for early access and pre-order pricing.">
+  <meta property="og:title" content="YakYak - Coming soon">
+  <meta property="og:description" content="YakYak is coming soon! Sign up for early access and pre-order pricing.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="mppdqluh-logo.png">
+  <link rel="icon" href="mppdqluh-logo.png">
+  <style>
+    :root {
+      --bg: #f5f4ed;
+      --surface: #faf9f5;
+      --surface-warm: #e8e6dc;
+      --fg: #141413;
+      --fg-2: #3d3d3a;
+      --muted: #5e5d59;
+      --meta: #87867f;
+      --border: #f0eee6;
+      --border-soft: #e8e6dc;
+      --accent: #c96442;
+      --accent-on: #faf9f5;
+      --accent-hover: #a34e32;
+      --accent-active: #8a3f28;
+      --danger: #b53333;
+      
+      --font-display: "Anthropic Serif", Georgia, "Times New Roman", serif;
+      --font-body: "Anthropic Sans", "Arial", system-ui, -apple-system, sans-serif;
+      --font-mono: ui-monospace, 'JetBrains Mono', Menlo, monospace;
+      
+      --text-xs: 10px;
+      --text-sm: 14px;
+      --text-base: 16px;
+      --text-lg: 20px;
+      --text-xl: 25px;
+      --text-2xl: 32px;
+      --text-3xl: 52px;
+      --text-4xl: 64px;
+      
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      
+      --elev-flat: none;
+      --elev-ring: 0 0 0 1px var(--border);
+      --elev-raised: rgba(0, 0, 0, 0.05) 0px 4px 24px;
+      --elev-chunky: 0 4px 0 0 var(--border-soft);
+      --elev-chunky-accent: 0 4px 0 0 #a34e32;
+    }
+    
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html, body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Banner */
+    .stealth-banner {
+      background: #8b8c7a;
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      letter-spacing: 0.02em;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+    }
+    .stealth-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent-on);
+      display: inline-block;
+      margin-right: 4px;
+      animation: stealth-pulse 2s ease-in-out infinite;
+    }
+    @keyframes stealth-pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    /* Navigation */
+    header {
+      position: sticky;
+      top: 41px;
+      z-index: 100;
+      background: rgba(245, 244, 237, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: transform 0.2s;
+    }
+    .logo-link:hover { transform: translateY(3px); }
+    .logo-img { height: 70px; width: auto; display: block; }
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+      font-family: var(--font-body);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: var(--accent-on);
+      box-shadow: var(--elev-chunky-accent);
+      border-bottom: 2px solid rgba(0,0,0,0.1);
+    }
+    .btn-primary:hover {
+      color: var(--accent-on);
+      transform: translateY(3px);
+      box-shadow: 0 2px 0 0 var(--accent-hover);
+    }
+    .btn-primary:active {
+      background: var(--accent-active);
+      color: var(--accent-on);
+      transform: translateY(4px);
+      box-shadow: none;
+    }
+
+    /* Construction */
+    .uc-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 80px 24px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .uc-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,100,66,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,100,66,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+    .uc-notify {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--surface);
+      border: 1.5px solid rgba(201,100,66,0.3);
+      border-radius: 99px;
+      padding: 10px 20px;
+      z-index: 1;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .uc-notify:hover { background: rgba(201,100,66,0.07); }
+    .uc-notify span {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--muted);
+    }
+    .uc-notify strong {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--accent);
+    }
+    .dot {
+      width: 7px; height: 7px;
+      background: #CAAD5F;
+      border-radius: 80%;
+      display: inline-block;
+      animation: blink 1.4s ease-in-out infinite;
+    }
+    .dot2 { animation-delay: 0.2s; }
+    .dot3 { animation-delay: 0.4s; }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    .uc-dots { display: flex; gap: 5px; align-items: center; }
+    .uc-desc {
+      font-family: var(--font-body);
+      font-weight: 400;
+      font-size: 18px;
+      color: var(--muted);
+      text-align: center;
+      margin: 0 0 36px;
+      z-index: 1;
+      line-height: 1.6;
+      animation: slide-in 0.6s ease 0.15s both;
+    }
+    .uc-heading {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 52px;
+      line-height: 1.20;
+      color: var(--fg);
+      margin: 0 0 24px;
+      z-index: 1;
+      animation: slide-in 0.6s ease both;
+    }
+    @keyframes slide-in {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .uc-bar-wrap {
+      width: 320px;
+      background: rgba(201,100,66,0.15);
+      border-radius: 99px;
+      height: 8px;
+      overflow: hidden;
+      z-index: 1;
+      margin-bottom: 14px;
+    }
+    .uc-bar {
+      height: 100%;
+      width: 80%;
+      background: var(--accent);
+      border-radius: 99px;
+      animation: load 4s ease forwards;
+    }
+    @keyframes load {
+      from { width: 0%; }
+      to { width: 80%; }
+    }
+    .uc-pct {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      margin-bottom: 50px;
+    }
+    .uc-gif {
+      margin-bottom: 40px;
+      z-index: 1;
+      animation: monkey-rise 0.8s ease 0.3s both;
+    }
+    .uc-monkeys {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      animation: monkey-rise 0.8s ease 0.3s both;
+    }
+    .uc-monkeys picture {
+      display: inline-block;
+      animation: monkey-bob 2.4s ease-in-out infinite;
+    }
+    .uc-monkeys picture:nth-child(2) { animation-delay: 0.4s; }
+    .uc-monkeys picture:nth-child(3) { animation-delay: 0.8s; }
+    .uc-monkeys img {
+      display: block;
+      width: 120px;
+      height: 120px;
+    }
+    @keyframes monkey-bob {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes monkey-rise {
+      from { opacity: 0; transform: scale(0.85) translateY(16px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--fg);
+      color: var(--surface);
+      padding: 30px 0 30px;
+      border-top: 1px solid var(--fg-2);
+    }
+    .footer-bottom { text-align: center; font-size: 14px; color: #87867f; }
+    @media (max-width: 768px) {
+      .uc-monkeys { gap: 16px; }
+      .uc-monkeys picture img { width: 80px; height: 80px; }
+      .uc-heading { font-size: 36px; }
+      header { padding: 16px 0; }
+      .uc-wrap { padding: 48px 16px 48px; }
+    }
+    @media (max-width: 480px) {
+      .container { padding: 0 16px; }
+      .uc-bar-wrap { width: 260px; }
+      .uc-monkeys picture img { width: 64px; height: 64px; }
+      .uc-heading { font-size: 28px; }
+      .uc-desc { font-size: 16px; }
+      .uc-notify { flex-wrap: wrap; justify-content: center; padding: 12px 16px; }
+      .btn { padding: 10px 20px; font-size: 14px; }
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="stealth-banner">
+    <span class="stealth-dot"></span>
+    We are currently operating in stealth mode. Coming soon!
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="index.html" class="logo-link">
+          <img src="mpojd8aq-logo_yakyak.png" alt="YakYak" class="logo-img">
+        </a>
+        <a href="index.html#waitlist" class="btn btn-primary">Join Waitlist</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="uc-wrap">
+    <div class="uc-grid"></div>
+
+    <div class="uc-gif">
+      <div class="uc-monkeys">
+        <picture>
+          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f648/512.webp" type="image/webp">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f648/512.gif" alt="🙈" width="120" height="120">
+        </picture>
+        <picture>
+          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f649/512.webp" type="image/webp">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f649/512.gif" alt="🙉" width="120" height="120">
+        </picture>
+        <picture>
+          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64a/512.webp" type="image/webp">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64a/512.gif" alt="🙊" width="120" height="120">
+        </picture>
+      </div>
+    </div>
+
+    <h1 class="uc-heading">we're under construction</h1>
+
+    <p class="uc-desc">please check back for an update soon</p>
+
+    <div class="uc-bar-wrap">
+      <div class="uc-bar"></div>
+    </div>
+
+    <p class="uc-pct">80% COMPLETE</p>
+
+    <div class="uc-notify">
+      <div class="uc-dots">
+        <div class="dot"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+      </div>
+      <span>reach out to us at <a href="mailto:hello@yakyaklabs.com" style="color: var(--accent); font-weight: 700; text-decoration: none;">hello@yakyaklabs.com</a></span>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2026 YakYak Labs. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
