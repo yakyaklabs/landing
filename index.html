@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>The future of language learning starts here with YakYak!</title>
+  <title>The future of language learning starts here!</title>
   <meta name="description" content="YakYak helps English speakers learn Mandarin with science-backed, encouraging lessons. Pre-order pricing guaranteed.">
   <meta property="og:title" content="YakYak - The future of language learning">
   <meta property="og:description" content="YakYak helps English speakers learn Mandarin with science-backed, encouraging lessons. Pre-order pricing guaranteed.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="logo.png">
-  <link rel="icon" href="logo.png" type="image/png" sizes="any">
+  <meta property="og:image" content="images/logo.png">
+  <link rel="icon" href="images/logo.png" type="image/png" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Taipei+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -456,10 +456,6 @@
     }
 
     /* Waitlist */
-    .waitlist-hero {
-      background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
-    }
-
     .waitlist-content h2 {
       text-align: center;
       margin-bottom: 12px;
@@ -677,7 +673,7 @@
     <div class="container">
       <nav>
         <a href="" class="logo-link" id="logo-link">
-          <img src="logo_company.png" alt="YakYak" class="logo-img" height="72">
+          <img src="images/logo_company.png" alt="YakYak" class="logo-img" height="72">
         </a>
         <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
       </nav>
@@ -803,7 +799,7 @@
    </section>
 
   <!-- Waitlist -->
-  <section class="waitlist-hero" id="waitlist" style="scroll-margin-top: 80px;">
+  <section id="waitlist" style="scroll-margin-top: 80px;">
     <div class="container">
       <div class="waitlist-content">
         <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
@@ -901,6 +897,16 @@
           return;
         }
 
+        // POST to Google Apps Script
+        fetch('https://script.google.com/macros/s/REPLACE_WITH_YOUR_APP_SCRIPT_ID/exec', {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: 'email=' + encodeURIComponent(email)
+        }).catch(function() {
+          // no-cors mode means we can't read the response — silently succeed
+        });
+
         setTimeout(function() {
           waitlistForm.innerHTML = `
             <div style="text-align: center; padding: 40px 20px;">
@@ -912,8 +918,6 @@
             </div>
           `;
         }, 1000);
-
-        /* Confirmation message stays until user navigates away */
       });
     }
   </script>
