@@ -282,6 +282,11 @@
     }
     .hero-content .lead picture img {
       vertical-align: middle;
+      animation: hero-pop 2s ease-in-out infinite;
+    }
+    @keyframes hero-pop {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
     }
 
     .hero-cta {
@@ -461,22 +466,6 @@
       color: var(--fg);
     }
 
-    @keyframes bell-ring {
-      0% { transform: rotate(0deg); }
-      2% { transform: rotate(20deg); }
-      4% { transform: rotate(-16deg); }
-      6% { transform: rotate(14deg); }
-      8% { transform: rotate(-10deg); }
-      10% { transform: rotate(6deg); }
-      12% { transform: rotate(-4deg); }
-      14% { transform: rotate(2deg); }
-      16%, 100% { transform: rotate(0deg); }
-    }
-    .emoji-bounce {
-      display: inline-block;
-      font-size: 1.2em;
-      animation: bell-ring 5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
-    }
     .waitlist-inline {
       display: flex;
       gap: 12px;
@@ -814,7 +803,7 @@
       <div class="waitlist-content">
         <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
           <h2 style="margin:0">Get early access at an exclusive price</h2>
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f514/512.gif" alt="🔔" width="58" height="58" class="emoji-bounce" style="vertical-align: middle">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f514/512.gif" alt="🔔" width="58" height="58" style="vertical-align: middle">
         </div>
         
         <form id="waitlist-form-main" class="waitlist-inline">

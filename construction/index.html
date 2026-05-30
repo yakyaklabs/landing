@@ -265,35 +265,18 @@
     .uc-gif {
       margin-bottom: 40px;
       z-index: 1;
-      animation: monkey-rise 0.8s ease 0.3s both;
     }
     .uc-monkeys {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 16px;
-      animation: monkey-rise 0.8s ease 0.3s both;
+      gap: 20px;
     }
-    .uc-monkeys picture {
-      display: inline-block;
-      animation: monkey-bob 2.4s ease-in-out infinite;
-    }
-    .uc-monkeys picture:nth-child(2) { animation-delay: 0.4s; }
-    .uc-monkeys picture:nth-child(3) { animation-delay: 0.8s; }
     .uc-monkeys img {
       display: block;
       width: 120px;
       height: 120px;
     }
-    @keyframes monkey-bob {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-6px); }
-    }
-    @keyframes monkey-rise {
-      from { opacity: 0; transform: scale(0.85) translateY(16px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
-    }
-
     /* Footer */
     footer {
       background: var(--fg);
@@ -345,16 +328,13 @@
     <div class="uc-gif">
       <div class="uc-monkeys">
         <picture>
-          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f648/512.webp" type="image/webp">
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f648/512.gif" alt="🙈" width="120" height="120">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f648/512.gif" alt="🙈" width="120" height="120" loading="lazy">
         </picture>
         <picture>
-          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f649/512.webp" type="image/webp">
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f649/512.gif" alt="🙉" width="120" height="120">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f649/512.gif" alt="🙉" width="120" height="120" loading="lazy">
         </picture>
         <picture>
-          <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64a/512.webp" type="image/webp">
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64a/512.gif" alt="🙊" width="120" height="120">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f64a/512.gif" alt="🙊" width="120" height="120" loading="lazy">
         </picture>
       </div>
     </div>
