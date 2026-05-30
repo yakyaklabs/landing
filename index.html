@@ -413,13 +413,16 @@
 
     /* Waitlist */
     .waitlist-content {
-      max-width: 640px;
       margin: 0 auto;
     }
     .waitlist-content h2 {
       text-align: center;
       margin-bottom: 12px;
       color: var(--fg);
+    }
+    .waitlist-form-wrap {
+      max-width: 640px;
+      margin: 0 auto;
     }
     .bell-animate {
       animation: bell-ring 2s ease-in-out infinite;
@@ -732,23 +735,23 @@
   <section id="waitlist" style="scroll-margin-top: 80px;">
     <div class="container">
       <div class="waitlist-content">
-        <div style="text-align:center;margin-bottom:12px;">
-          <h2 style="margin:0;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;">
-            <span style="white-space:nowrap;">Get early access at an exclusive price</span>
-            <img src="images/bell.gif" alt="🔔" width="46" height="46" class="bell-animate" style="flex-shrink:0;">
-          </h2>
-        </div>
+        <h2 style="margin:0 0 12px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:nowrap;">
+          <span>Get early access at an exclusive price</span>
+          <img src="images/bell.gif" alt="🔔" width="46" height="46" class="bell-animate" style="flex-shrink:0;">
+        </h2>
         
-        <form id="waitlist-form-main" class="waitlist-inline">
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="you@example.com" 
-            required
-          />
-          <button type="submit" class="btn-notify">Join Waitlist</button>
-        </form>
-        <p style="font-size: 15px; color: var(--meta); margin-top: 28px; text-align: center;">We respect your privacy and will never spam you.</p>
+        <div class="waitlist-form-wrap">
+          <form id="waitlist-form-main" class="waitlist-inline">
+            <input 
+              type="email" 
+              name="email" 
+              placeholder="you@example.com" 
+              required
+            />
+            <button type="submit" class="btn-notify">Join Waitlist</button>
+          </form>
+          <p style="font-size: 15px; color: var(--meta); margin-top: 28px; text-align: center;">We respect your privacy and will never spam you.</p>
+        </div>
       </div>
     </div>
   </section>
