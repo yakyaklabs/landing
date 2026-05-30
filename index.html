@@ -465,6 +465,14 @@
       margin-bottom: 12px;
       color: var(--fg);
     }
+    .bell-animate {
+      animation: bell-ring 2s ease-in-out infinite;
+    }
+    @keyframes bell-ring {
+      0%, 100% { transform: rotate(0deg); }
+      10%, 30% { transform: rotate(12deg); }
+      20% { transform: rotate(-8deg); }
+    }
 
     .waitlist-inline {
       display: flex;
@@ -682,7 +690,7 @@
       <div class="hero">
         <div class="hero-content">
            <h1>The future of language learning starts here with YakYak!</h1>
-           <div class="lead">We're transforming the way you learn languages <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f929/512.gif" alt="🤩" width="32" height="32" style="vertical-align: middle"></div>
+           <div class="lead">We're transforming the way you learn languages <picture><img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f929/512.gif" alt="🤩" width="32" height="32"></picture></div>
         </div>
         <div class="hero-visual">
           <div class="hero-visual-content">
@@ -800,7 +808,7 @@
       <div class="waitlist-content">
         <div style="display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;">
           <h2 style="margin:0">Get early access at an exclusive price</h2>
-          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f514/512.gif" alt="🔔" width="58" height="58" style="vertical-align: middle">
+          <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f514/512.gif" alt="🔔" width="58" height="58" class="bell-animate">
         </div>
         
         <form id="waitlist-form-main" class="waitlist-inline">

@@ -273,9 +273,17 @@
       gap: 20px;
     }
     .uc-monkeys img {
-      display: block;
-      width: 120px;
-      height: 120px;
+      border-radius: 16px;
+      box-shadow: var(--elev-raised);
+      animation: monkey-bob 3s ease-in-out infinite;
+    }
+    .uc-monkeys picture:nth-child(2) img { animation-delay: 0.4s; }
+    .uc-monkeys picture:nth-child(3) img { animation-delay: 0.8s; }
+    @keyframes monkey-bob {
+      0%, 100% { transform: translateY(0); }
+      25% { transform: translateY(-6px); }
+      50% { transform: translateY(0); }
+      75% { transform: translateY(-3px); }
     }
     /* Footer */
     footer {
