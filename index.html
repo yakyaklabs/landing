@@ -2,17 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
   <title>The future of language learning starts here!</title>
-  <meta name="description" content="YakYak helps English speakers learn Mandarin with science-backed, encouraging lessons. Pre-order pricing guaranteed.">
-  <meta property="og:title" content="YakYak - The future of language learning">
-  <meta property="og:description" content="YakYak helps English speakers learn Mandarin with science-backed, encouraging lessons. Pre-order pricing guaranteed.">
+  <meta name="description" content="YakYak is coming soon! Sign up for early access and pre-order pricing.">
+  <meta property="og:title" content="The future of language learning starts here!">
+  <meta property="og:description" content="YakYak is coming soon! Sign up for early access and pre-order pricing.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/logo.png">
-  <link rel="icon" href="images/logo.png" type="image/png" sizes="any">
+  <meta property="og:image" content="https://yakyaklabs.com/images/logo.png">
+  <link rel="icon" href="/images/logo.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Taipei+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  
   <style>
     :root {
       --bg: #f5f4ed;
@@ -76,40 +77,34 @@
       line-height: 1.10;
       letter-spacing: normal;
     }
-
     h2 {
       font-family: var(--font-display);
       font-size: var(--text-3xl);
       font-weight: 500;
       line-height: 1.20;
     }
-
     h3 {
       font-family: var(--font-display);
       font-size: var(--text-2xl);
       font-weight: 500;
       line-height: 1.10;
     }
-
     p {
       font-size: var(--text-base);
       line-height: 1.60;
       color: var(--muted);
     }
-
     .lead {
       font-family: var(--font-body);
       font-size: var(--text-lg);
       line-height: 1.60;
       color: var(--fg);
     }
-
     a {
       color: var(--accent);
       text-decoration: underline;
       transition: color 0.2s;
     }
-
     a:hover {
       color: var(--fg-2);
     }
@@ -120,25 +115,20 @@
       margin: 0 auto;
       padding: 0 24px;
     }
-
     section {
       padding: 96px 0;
       background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%);
     }
-
     section.dark {
       background: var(--fg);
       color: var(--surface);
     }
-
     section.dark p {
       color: var(--surface);
     }
-
     section.dark h2 {
       color: var(--surface);
     }
-
     section.dark h3 {
       color: var(--surface);
     }
@@ -179,14 +169,12 @@
       border-bottom: 1px solid var(--border);
       padding: 24px 0;
     }
-
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 32px;
     }
-
     .logo-link {
       display: flex;
       align-items: center;
@@ -196,19 +184,16 @@
     .logo-link:hover {
       transform: translateY(3px);
     }
-
     .logo-img {
       height: 72px;
       width: auto;
       display: block;
     }
-
     nav .links {
       display: flex;
       gap: 40px;
       align-items: center;
     }
-
     nav .links a {
       font-size: var(--text-base);
       border: none;
@@ -216,11 +201,9 @@
       text-decoration: none;
       transition: color 0.2s;
     }
-
     nav .links a:hover {
       color: var(--accent);
     }
-
     @media (max-width: 768px) {
       nav .links {
         display: none;
@@ -240,20 +223,17 @@
       text-decoration: none;
       font-family: var(--font-body);
     }
-
     .btn-primary {
       background: var(--accent);
       color: var(--accent-on);
       box-shadow: var(--elev-chunky-accent);
       border-bottom: 2px solid rgba(0,0,0,0.1);
     }
-
     .btn-primary:hover {
       color: var(--accent-on);
       transform: translateY(3px);
       box-shadow: 0 2px 0 0 var(--accent-hover);
     }
-
     .btn-primary:active {
       background: var(--accent-active);
       color: var(--accent-on);
@@ -269,12 +249,10 @@
       align-items: center;
       min-height: 70vh;
     }
-
     .hero-content h1 {
       margin-bottom: 32px;
       color: var(--fg);
     }
-
     .hero-content .lead {
       font-size: var(--text-lg);
       margin-bottom: 40px;
@@ -288,14 +266,12 @@
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.15); }
     }
-
     .hero-cta {
       display: flex;
       gap: 16px;
       margin-bottom: 60px;
       flex-wrap: wrap;
     }
-
     .hero-visual {
       position: relative;
       display: flex;
@@ -307,7 +283,6 @@
       border-radius: var(--radius-lg);
       box-shadow: var(--elev-raised);
     }
-
     .hero-visual-content {
       position: relative;
       width: 100%;
@@ -317,7 +292,6 @@
       justify-content: center;
       padding: 40px;
     }
-
     .char-card {
       position: absolute;
       background: var(--bg);
@@ -326,40 +300,34 @@
       border: 1px solid var(--border);
       box-shadow: var(--elev-ring);
     }
-
     .char-card-1 {
       width: 150px;
       top: 8%;
       left: 8%;
       animation: float 6s ease-in-out infinite;
     }
-
     .char-card-2 {
       width: 200px;
       top: 12%;
       right: 10%;
       animation: float 5.5s ease-in-out infinite 0.3s;
     }
-
     .char-card-3 {
       width: 260px;
       bottom: 10%;
       left: 20%;
       animation: float 5s ease-in-out infinite 0.6s;
     }
-
     .char-card-4 {
       width: 160px;
       bottom: 20%;
       right: 10%;
       animation: float 5.2s ease-in-out infinite 0.4s;
     }
-
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
     }
-
     .char-card h4 {
       font-size: var(--text-sm);
       font-weight: 500;
@@ -367,13 +335,11 @@
       color: var(--fg);
       font-family: var(--font-display);
     }
-
     .char-card p {
       font-size: 13px;
       color: var(--meta);
       line-height: 1.5;
     }
-
     .char-label {
       display: flex;
       gap: 16px;
@@ -381,14 +347,12 @@
       align-items: flex-start;
       margin-bottom: 12px;
     }
-
     .char-unit {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
     }
-
     .char-symbol {
       font-family: 'Taipei Sans TC', system-ui, sans-serif;
       font-size: 44px;
@@ -396,7 +360,6 @@
       color: var(--accent);
       line-height: 1;
     }
-
     .char-pinyin {
       font-family: var(--font-body);
       font-size: 14px;
@@ -404,14 +367,12 @@
       color: var(--muted);
       line-height: 1;
     }
-
     @media (max-width: 1024px) {
       .hero {
         grid-template-columns: 1fr;
         gap: 60px;
         min-height: auto;
       }
-
       .hero-visual {
         height: 320px;
       }
@@ -424,7 +385,6 @@
       gap: 48px;
       margin-top: 60px;
     }
-
     .feature-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -433,23 +393,19 @@
       transition: all 0.3s;
       box-shadow: var(--elev-flat);
     }
-
     .feature-card:hover {
       border-color: var(--accent);
       box-shadow: var(--elev-raised);
       transform: translateY(-4px);
     }
-
     .feature-icon {
       margin-bottom: 20px;
       color: var(--accent);
       line-height: 0;
     }
-
     .feature-card h3 {
       margin-bottom: 16px;
     }
-
     .feature-card p {
       font-size: var(--text-sm);
       line-height: 1.60;
@@ -469,14 +425,12 @@
       10%, 30% { transform: rotate(12deg); }
       20% { transform: rotate(-8deg); }
     }
-
     .waitlist-inline {
       display: flex;
       gap: 12px;
       max-width: 540px;
       margin: 32px auto 0;
     }
-
     .waitlist-inline input {
       flex: 1;
       padding: 14px 20px;
@@ -489,12 +443,10 @@
       outline: none;
       transition: border-color 0.2s, box-shadow 0.2s;
     }
-
     .waitlist-inline input:focus {
       border-color: var(--accent);
       box-shadow: 0 0 0 3px rgba(201, 100, 66, 0.2);
     }
-
     .btn-notify {
       padding: 14px 28px;
       background: var(--accent);
@@ -510,20 +462,17 @@
       transition: background 0.2s, transform 0.15s;
       border-bottom: 2px solid rgba(0,0,0,0.1);
     }
-
     .btn-notify:hover {
       color: var(--accent-on);
       transform: translateY(3px);
       box-shadow: 0 2px 0 0 var(--accent-hover);
     }
-
     .btn-notify:active {
       background: var(--accent-active);
       color: var(--accent-on);
       transform: translateY(3px);
       box-shadow: none;
     }
-
     @media (max-width: 600px) {
       .waitlist-inline {
         flex-direction: column;
@@ -541,59 +490,48 @@
       padding: 30px 0 30px;
       border-top: 1px solid var(--fg-2);
     }
-
     footer .footer-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
       margin-bottom: 30px;
     }
-
     footer h4 {
       font-size: var(--text-base);
       font-weight: 500;
       margin-bottom: 16px;
       font-family: var(--font-display);
     }
-
     footer p {
       font-size: 14px;
       color: #b0aea5;
       line-height: 1.60;
     }
-
     footer a {
       color: var(--accent);
       text-decoration: none;
     }
-
     footer a:hover {
       color: #d97757;
     }
-
     footer ul {
       list-style: none;
     }
-
     footer ul li {
       margin-bottom: 12px;
     }
-
     footer ul li a,
     footer ul li span {
       font-size: 14px;
       color: #b0aea5;
       text-decoration: none;
     }
-
     footer ul li a:hover {
       color: #CAAD5F;
     }
-
     footer ul li span {
       cursor: default;
     }
-
     .footer-bottom {
       border-top: 1px solid var(--fg-2);
       padding-top: 24px;
@@ -601,55 +539,44 @@
       font-size: 14px;
       color: #87867f;
     }
-
     @media (max-width: 768px) {
       section {
         padding: 60px 0;
       }
-
       .container {
         padding: 0 16px;
       }
-
       nav .links {
         display: none;
       }
-
       .hero {
         padding: 80px 0;
       }
-
       .hero-cta {
         flex-direction: column;
       }
-
       .btn {
         display: block;
         text-align: center;
       }
-
       .hero-visual {
         height: 280px;
       }
-
       .char-card-1 {
         width: 140px;
         top: 10%;
         left: 5%;
       }
-
       .char-card-2 {
         width: 120px;
         bottom: 5%;
         right: 0%;
       }
-
       .char-card-3 {
         width: 120px;
         bottom: 5%;
         left: 5%;
       }
-
       .char-card-4 {
         width: 90px;
         top: 5%;
@@ -898,7 +825,7 @@
         }
 
         // POST to Google Apps Script
-        fetch('https://script.google.com/macros/s/REPLACE_WITH_YOUR_APP_SCRIPT_ID/exec', {
+        fetch('https://script.google.com/macros/s/AKfycbw9mTlK2X6GH0CKH3kdJqRVUw41BOX5H2rPi_YlI9vUj2WriBHVdODCDW3caO_xuQsXmw/exec', {
           method: 'POST',
           mode: 'no-cors',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -911,9 +838,9 @@
           waitlistForm.innerHTML = `
             <div style="text-align: center; padding: 40px 20px;">
               <div style="font-size: 48px; margin-bottom: 20px;">✓</div>
-              <h3 style="color: var(--accent); margin-bottom: 12px; font-size: 24px;">Thank You!</h3>
+              <h3 style="color: var(--accent); margin-bottom: 12px; font-size: 24px;">You're in!</h3>
               <p style="color: var(--muted); font-size: 16px; line-height: 1.6;">
-                We've received your request. You'll hear from us soon.
+                We'll let you know as soon as we're ready to welcome our first learners.
               </p>
             </div>
           `;
