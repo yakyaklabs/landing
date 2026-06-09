@@ -11,7 +11,7 @@
   <meta property="og:image" content="https://yakyaklabs.com/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Taipei+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Mono:wght@400&family=Noto+Sans+SC:wght@400&family=Noto+Sans+TC:wght@400&family=Noto+Serif:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" href="images/logo.png">
   <style>
     :root {
@@ -30,9 +30,11 @@
       --accent-active: #8a3f28;
       --danger: #b53333;
 
-      --font-display: "Anthropic Serif", Georgia, "Times New Roman", serif;
-      --font-body: "Anthropic Sans", "Arial", system-ui, -apple-system, sans-serif;
-      --font-mono: ui-monospace, 'JetBrains Mono', Menlo, monospace;
+      --font-display: 'Noto Serif', serif;
+      --font-weight-display: 500;
+      --font-body: 'Noto Sans', sans-serif;
+      --font-weight-body: 400;
+      --font-mono: 'Noto Sans Mono', monospace;
 
       --text-xs: 10px;
       --text-sm: 14px;
@@ -73,6 +75,7 @@
     /* Typography */
     h1 {
       font-family: var(--font-display);
+      font-weight: var(--font-weight-display);
       font-size: var(--text-4xl);
       font-weight: 500;
       line-height: 1.10;
@@ -80,12 +83,14 @@
     }
     h2 {
       font-family: var(--font-display);
+      font-weight: var(--font-weight-display);
       font-size: var(--text-3xl);
       font-weight: 500;
       line-height: 1.20;
     }
     h3 {
       font-family: var(--font-display);
+      font-weight: var(--font-weight-display);
       font-size: var(--text-2xl);
       font-weight: 500;
       line-height: 1.10;
@@ -335,6 +340,7 @@
       margin-bottom: 8px;
       color: var(--fg);
       font-family: var(--font-display);
+      font-weight: var(--font-weight-display);
     }
     .char-card p {
       font-size: 16px;
@@ -355,7 +361,7 @@
       gap: 8px;
     }
     .char-symbol {
-      font-family: 'Taipei Sans TC', system-ui, sans-serif;
+      font-family: 'Noto Sans TC', 'Noto Sans SC', sans-serif;
       font-size: 44px;
       font-weight: 400;
       color: var(--accent);
@@ -508,6 +514,7 @@
       font-weight: 500;
       margin-bottom: 16px;
       font-family: var(--font-display);
+      font-weight: var(--font-weight-display);
     }
     footer p {
       font-size: 14px;
